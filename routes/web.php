@@ -2,20 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Http\Controllers\SmartController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/' ,[SmartController::class , 'home'])->name('home');
+Route::get('/about' ,[SmartController::class , 'about'])->name('about');
+Route::get('/salons', [SmartController::class, 'salons'])->name('salons');
+Route::get('/post', [SmartController::class, 'show'])->name('post.show');
+Route::get('/gallery' ,[SmartController::class , 'gallery'])->name('gallery');
+Route::get('/contact' ,[SmartController::class , 'contact'])->name('contact');
 
 
 Route::group(['prefix' => 'admin'], function () {
