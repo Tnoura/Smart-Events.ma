@@ -281,6 +281,62 @@
     </section>
     <!-- end_partenaire -->
 
+       <!-- Gallery -->
+   
+   <section class="blog-area-two mt-5">
+   <div class="container mt-5">
+   <div class="row">
+   <div class="event-wrapper">
+   <div class="title-area mb-0">
+   <h2 class="sub-title style2 mb-0 mt-5">Gallery</h2>
+   </div>
+   <div class="title-area mb-0" id="twobtn">
+   <div class="event-btn mt-5"><a href="{{route('gallery')}}" class="th-btn gold-btn">Voir toutes les images</a></div>
+   </div>
+   </div>
+   <div class="row align-items-center">
+   <div class="col-md-1" id="twobtn">
+   <button class="btn-prev-gallery th-btn gold-border-btn mr-2"><i class="fa fa-chevron-left"></i></button>
+   </div>
+   <div class="col-md-10">
+   <div class="row blog-slide2 slider-shadow th-carousel" id="gallerySlider" data-slide-show="3" data-lg-slide-show="2" data-md-slide-show="2" data-sm-slide-show="1" data-arrows="true">
+   <div class="col-md-6 col-xl-4 mt-5">
+   <img src="{{asset('assets/img/normal/img1.png')}}" alt="Smart Expos" />
+   </div>
+   <div class="col-md-6 col-xl-4 mt-5">
+   <img src="{{asset('assets/img/normal/img2.png')}}" alt="Smart Expos" />
+   </div>
+   <div class="col-md-6 col-xl-4 mt-5">
+   <img src="{{asset('assets/img/normal/img3.png')}}" alt="Smart Expos" />
+   </div>
+   <div class="col-md-6 col-xl-4 mt-5">
+   <img src="{{asset('assets/img/normal/img4.png')}}" alt="Smart Expos" />
+   </div>
+   <div class="col-md-6 col-xl-4 mt-5">
+   <img src="{{asset('assets/img/normal/img5.png')}}" alt="Smart Expos" />
+   </div>
+   <div class="col-md-6 col-xl-4 mt-5">
+   <img src="{{asset('assets/img/normal/img6.png')}}" alt="Smart Expos" />
+   </div>
+   <div class="col-md-6 col-xl-4 mt-5">
+   <img src="{{asset('assets/img/normal/img7.png')}}" alt="Smart Expos" />
+   </div>
+   <div class="col-md-6 col-xl-4 mt-5">
+   <img src="{{asset('assets/img/normal/img8.png')}}" alt="Smart Expos" />
+   </div>
+   <div class="col-md-6 col-xl-4 mt-5">
+   <img src="{{asset('assets/img/normal/img9.png')}}" alt="Smart Expos" />
+   </div>
+   </div>
+   </div>
+   <div class="col-md-1" id="twobtn">
+   <button class="btn-next-gallery th-btn gold-border-btn ml-2" ><i class="fa fa-chevron-right"></i></button>
+   </div>
+   </div>
+   </div>
+   </div>
+   </section>
+   <!--end gallery -->
 
     <!-- video -->
     <section class="blog-area-two  bg-top-center bg-smoke space mt-5 ">
