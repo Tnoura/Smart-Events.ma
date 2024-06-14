@@ -11,6 +11,8 @@ Route::get('/post/{slug}', [SmartController::class, 'show'])->name('post.show');
 Route::get('/gallery' ,[SmartController::class , 'gallery'])->name('gallery');
 Route::get('/contact' ,[SmartController::class , 'contact'])->name('contact');
 
+Route::post('/store' ,[SmartController::class , 'store'])->name('store');
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
