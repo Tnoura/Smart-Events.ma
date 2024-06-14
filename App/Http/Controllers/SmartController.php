@@ -3,12 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
 
 class SmartController extends Controller
 {
     public function home(){
-        return view("Principal.home");
+        $posts = Post::orderBy('created_at' ,'desc')
+        ->whereStatus('PUBLISHED')
+        ->take(4)
+        ->get();
+        return view('Principal.home', ['myposts' => $posts]);
     }
+
     public function about(){
         return view("Principal.about");
     }
@@ -18,8 +24,9 @@ class SmartController extends Controller
     public function gallery(){
         return view("Principal.gallery");
     }
-    public function show(){
-        return view("Principal.show");
+    public function show($slug) {
+        $post = Post::where('slug', $slug)->firstOrFail();
+        return view('Principal.show', ['post' => $post]);
     }
  
 }
