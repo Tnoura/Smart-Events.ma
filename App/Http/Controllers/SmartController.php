@@ -17,9 +17,13 @@ class SmartController extends Controller
 
     public function about(){
         return view("Principal.about");
-    }
+    }  
+    
     public function salons(){
-        return view("Principal.salons");
+        $posts = Post::orderBy('created_at' ,'desc')
+        ->select('title', 'slug', 'image', 'seo_title', 'meta_description', 'meta_keywords')
+        ->get();
+        return view('Principal.salons', ['myposts' => $posts]);
     }
     public function gallery(){
         return view("Principal.gallery");
